@@ -15,7 +15,7 @@ public class ListaData {
 	public static void main(String[] args) {
 		
 		EntityManagerFactory conn = Persistence.createEntityManagerFactory("tjw_jpa01");
-			EntityManager db= conn.createEntityManager();
+			EntityManager db = conn.createEntityManager();
 			
 			Query query = db.createQuery("Select e From Login_account e");
 			
