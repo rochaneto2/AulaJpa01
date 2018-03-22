@@ -1,19 +1,20 @@
-package br.edu.ifce.relacionamento.onetomany;
+package manytomany;
 
 import java.util.Collection;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToMany;
+
 
 @Entity
-public class Departamento {
+public class Livro {
+	
 	@Id
 	@GeneratedValue
 	private long id;
 	
-	@OneToMany
-	private Collection<Empregado> empregados;
-	
+	@ManyToMany
+	private Collection<Autor> autores;
 }

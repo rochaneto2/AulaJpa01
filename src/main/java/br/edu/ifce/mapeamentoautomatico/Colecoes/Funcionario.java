@@ -13,6 +13,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.Persistence;
+import javax.persistence.Table;
 
 import br.edu.ifce.jpa.Login_account;
 
@@ -104,12 +105,14 @@ public class Funcionario {
 				funcionario.setNome("Rocha");
 				
 				 Collection<String> fone = new ArrayList<String>();
-				 fone.add("32875814");
+				 funcionario.setTelefones(fone);
 				 fone.add("30553353");
+				 fone.add("30555678");
+				 fone.add("30550987");
+				 
 				
 				db.persist(funcionario);
 				db.getTransaction().begin();
-				db.getTransaction().commit();}
-
-	
+				db.getTransaction().commit();
+		}	
 }
